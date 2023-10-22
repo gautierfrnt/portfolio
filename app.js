@@ -38,17 +38,24 @@ gsap.to("#etoile", {
     ease: "none",
 });
 
-
-
 // Email.js
 
-// function SendMail() {
-//     var params = {
-//         from_name : document.getElementById("fullName").value,
-//         email_id : document.getElementById("email_id").value,
-//         message : document.getElementById("message").value
-//     }
-//     emailjs.send(){
+const btn = document.getElementById('submit');
 
-//     })
-// }
+document.getElementById('form').addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Envoie...';
+
+   const serviceID = 'service_bpl25xm';
+   const templateID = 'template_jvorhyq';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Votre message est envoyé');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});

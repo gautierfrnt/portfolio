@@ -52,6 +52,18 @@
                 <video src="images/ENERGCUMA.mp4" autoPlay loop muted></video>
             </div>
 
+            <h1 class='red-title'>Contactez-moi !</h1>
+            <div class="contact-flex">
+                <form id="form">
+                    <input type="text" placeholder='Prénom' name='your_name' id="your_name" required/>
+                    <input type="email" placeholder='E-mail' name='your_email' id="your_email" required/>
+                    <textarea placeholder="Objets" name='message' id="message" required></textarea>
+                    <div>
+                        <input type="submit" value="Envoyer" id="submit" onclick="SendMail();"/>          
+                    </div>
+                </form>
+            </div>
+
             <div class="contact_bottom">
                 <div>
                     <a href="images/cv.pdf" target='_blank'><img src="images/cv.png" alt="cv" /></a>
@@ -73,6 +85,13 @@
                         
         </div>
 
+        <!-- Email JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+
+        <script type="text/javascript">
+            emailjs.init("TL560xq4WlMFu91I-");
+        </script>
 
         <script src="app.js"></script>
 </body>
