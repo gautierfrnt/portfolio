@@ -525,6 +525,12 @@ input[type="submit"]:hover{
         width: 100%;
     }
 
+    
+    .button{
+        font-size: 20px;
+        margin-bottom: 2rem;
+    }
+
     /* Skills */
     .front-back{
         flex-direction: column;
@@ -536,6 +542,13 @@ input[type="submit"]:hover{
     }
     .skills-category{
         font-size: 25px;
+    }
+
+    .tools{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 
     /* Mon parcours */
@@ -593,6 +606,7 @@ input[type="submit"]:hover{
     }
 
     .contact_bottom{
+        margin-top: 5rem;
         gap: 0;
         justify-content: space-between;
     }    
