@@ -15,7 +15,7 @@
 }
   
 html{
-    background-color: var(--noir);
+    background-color: var(--rouge);
 }
   
 .noise::before{
