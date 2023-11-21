@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gautier Fournet, un jeune étudiant français de 19 ans à l'IUT de Lens, s'est spécialisé dans le développement web avec une passion débordante et une créativité palpable. Son objectif est de créer des sites Internet à la fois ergonomiques, esthétiques et captivants. Prenez le temps d'explorer ses projets, appréciez son travail et n'hésitez surtout pas à le contacter.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/Logo.png">
+    <link rel="icon" href="images/logo.png">
     <title>Gautier Fournet</title>
 </head>
-<body>
+<body data-barba="wrapper">
+
+    <div class="transition"></div>
     
-    <div class="noise"></div>
-        <div class="container">  
+    
+    <main data-barba="container" data-barba-namespace="about">
+        
+        <div class="noise"></div>
+        <div class="container" data-barba-namespace="about-section">  
             <nav class="nav">
                 <div>
                   <a href="/">
-                    <img src="/images/Logo.png" alt="Light" />
+                    <img src="./images/logo.png" alt="Light" />
                   </a>
                 </div>
                 <div class='link'>
-                    <a href="index.html">Home</a>
-                    <a href="projet.html">Projets</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./projet.html">Projets</a>
                     <a href="contact.html">Contact</a>
                     <img src="images/sun.png" id="icon" />
                 </div>
@@ -32,7 +38,7 @@
             </div>
 
 
-            <h1 class='red-title'>Contactez-moi !</h1>
+            <h1 class='red-title gsap4'>Contactez-moi !</h1>
             <div class="contact-flex">
                 <form id="form">
                     <input type="text" placeholder='Prénom' name='your_name' id="your_name" required/>
@@ -42,9 +48,13 @@
                         <input type="submit" value="Envoyer" id="submit" onclick="SendMail();"/>          
                     </div>
                 </form>
+                <div>
+                    <img class="call" src="images/call.png" alt="on_s'appelle ?">
+                </div>
             </div>
 
-            <div class="contact_bottom">
+            <div class="bar"></div>
+            <footer>
                 <div>
                     <a href="images/cv.pdf" target='_blank'><img src="images/cv.png" alt="cv" /></a>
                     <p>CV</p>
@@ -61,8 +71,22 @@
                     <a href="https://github.com/gautierfrnt" target='_blank'><img src="images/github.png" alt="github" /></a>
                     <p>Github</p>
                 </div>
-            </div>
+            </footer>
         </div>
+
+    </main>
+
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+        <!-- Lenis -->
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+
+        <!-- Barba.js -->
+        <script src="https://unpkg.com/@barba/core"></script>
+
 
         <!-- Email JS -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">

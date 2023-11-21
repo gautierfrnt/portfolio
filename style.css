@@ -13,9 +13,28 @@
     --noir: #D3CCC1;
     --rouge: #141414;
 }
-  
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.transition{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: #ff4d00;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
 html{
     background-color: var(--rouge);
+    overflow-x: hidden;
 }
   
 .noise::before{
@@ -133,6 +152,20 @@ nav .link img{
     width: 2rem;
 }
 
+.gautier{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.gautier h1{
+    font-size: 7vw;
+    font-family: 'ClashDisplay-Bold';
+    color: var(--rouge);
+}
+
 /* F */
 
 .content{
@@ -186,6 +219,7 @@ nav .link img{
 .flex{
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 /* Skills */
@@ -225,6 +259,30 @@ nav .link img{
 
 .tools div img{
     color: var(--gris-blanc);
+}
+
+.tools div img:hover{
+    transition: .5s;
+    animation-name: icone;
+    animation-duration: .5s;
+}
+
+@keyframes icone {
+    0%{
+        transform: rotate(10deg);
+    }
+    25%{ 
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);    
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 .front p{
@@ -368,6 +426,8 @@ input[type="submit"]:hover{
 
 .contact-flex{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 2rem;
 }
 
@@ -379,11 +439,47 @@ input[type="submit"]:hover{
     width: 50%;
 }
 
+.contact-flex div{
+    display: flex;
+    justify-content: center;
+}
+
+.call {
+    width: 60%;
+    animation-name: call; /* Nom de l'animation */
+    animation-duration: 1.5s; /* Durée de l'animation */
+    animation-timing-function: ease; /* Fonction de temporisation (linear dans votre cas) */
+    animation-iteration-count: infinite; /* Nombre d'itérations (infini dans votre cas) */
+}
+
+@keyframes call {
+    0% {
+        transform: rotate(10deg);
+    }
+    25% { 
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);    
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+
 
 /* Contact End */
 
-.contact_bottom{
-    margin-top: 1rem;
+.bar{
+    margin: 3rem 0;
+    border: 3px solid var(--rouge);
+}
+
+footer{
     color: var(--gris-blanc);
     display: flex;
     justify-content: center;
@@ -391,13 +487,19 @@ input[type="submit"]:hover{
     align-items: center;
 }
 
-.contact_bottom div{
+footer div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.3rem;
     font-family: 'ClashDisplay-Medium';
+}
+
+footer div a:hover{
+    transition: .5s;
+    animation-name: icone;
+    animation-duration: .5s;
 }
 
 .form-submit{
@@ -496,6 +598,67 @@ input[type="submit"]:hover{
     }
 }
 
+.contain{
+    height: 20vh;
+    margin: 8rem 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.contain .txt, .txt2{
+    border: 3px solid var(--rouge);
+    padding: 2rem;
+    border-left: none;
+    border-right: none;
+    white-space: nowrap;
+    font-family: 'ClashDisplay-Bold';
+    color: var(--rouge);
+    font-size: 75px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contain img {
+    width: 4rem;
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.contain .txt{
+    animation: scroll 60s infinite linear;  
+}
+
+.contain .txt2{
+    animation: scrolldeux 60s infinite linear;  
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+} 
+
+@keyframes scrolldeux {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}   
 
 /* Responsive */
 
@@ -503,6 +666,16 @@ input[type="submit"]:hover{
     body {
       width: 100%;
     }
+
+    /* Text Bar */
+
+    .contain .txt, .txt2{
+        border: 3px solid var(--rouge);
+        font-size: 40px;
+        gap: 2rem;
+    }
+    
+
 
     /* Navbar */
     nav .link{
@@ -605,13 +778,13 @@ input[type="submit"]:hover{
         margin: 0 auto;
     }
 
-    .contact_bottom{
+    footer{
         margin-top: 5rem;
         gap: 0;
         justify-content: space-between;
     }    
 
-    .contact_bottom p{
+    footer p{
         font-size: 10px;
     }
   }

@@ -3,93 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gautier Fournet, un jeune étudiant français de 19 ans à l'IUT de Lens, s'est spécialisé dans le développement web avec une passion débordante et une créativité palpable. Son objectif est de créer des sites Internet à la fois ergonomiques, esthétiques et captivants. Prenez le temps d'explorer ses projets, appréciez son travail et n'hésitez surtout pas à le contacter.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/Logo.png">
+    <link rel="icon" href="images/logo.png">
     <title>Gautier Fournet</title>
 </head>
-<body>
+<body data-barba="wrapper">
+
+    <div class="transition"></div>
     
-    <div class="noise"></div>
-        <div class="container">  
-            <nav class="nav">
-                <div>
-                  <a href="/">
-                    <img src="/images/Logo.png" alt="Light" />
-                  </a>
-                </div>
-                <div class='link'>
-                    <a href="index.html">Home</a>
-                    <a href="projet.html">Projets</a>
-                    <a href="contact.html">Contact</a>
-                    <img src="images/sun.png" id="icon" />
-                </div>
-            </nav>
+    
+        <main data-barba="container" data-barba-namespace="about">
             
-            <div class='projet-flex'>
-                <h1 class="red-title">E-DN :</h1>
-                <div class='projet-tools'>
-                    <img src="images/wordpress.png" alt="" />
-                    <img src="images/figma.png" alt="" />
-                </div>
-            </div>
-    
-            <div class='description'>
-                <div class='left'>
-                    <p>EDN est un site web qui a été conçu lors d'un projet scolaire où nous devons promouvoir un évènement fictif. Dans notre cas, on voulait promouvoir un évènement caritatif E-Sport. On avait comme contrainte d'utiliser Wordpress qui offrait peu de fonctionnalité comparé au code. Il fallait tout d'abord créer la maquette sur Figma pour ensuite le traduire en code Wordpress. J'ai été dans une équipe de 5, mon rôle dans ce projet scolaire était de coder l'intégralité du site en Wordpress. J'ai fais cette tâche avec Louis Bocquet, Tanguy Caruel était chargé de designer le site et Valentin Warlop et Lucas Chedhomme était chargé du contenu Multimédia </p>
+            <div class="noise"></div>
+        
+            <div class="container">  
+                <nav class="nav">
                     <div>
-                    <a class="button" href="" target="_blank">Voir le projet</a>
+                    <a href="/">
+                        <img src="./images/logo.png" alt="light" />
+                    </a>
+                    </div>
+                    <div class='link'>
+                        <a href="index.html">Home</a>
+                        <a href="projet.html">Projets</a>
+                        <a href="contact.html">Contact</a>
+                        <img src="images/sun.png" id="icon" alt="icon"/>
+                    </div>
+                </nav>
+                
+                <div class='projet-flex'>
+                    <h1 class="red-title">E-DN :</h1>
+                    <div class='projet-tools'>
+                        <img src="images/wordpress.png" alt="wordpress" />
+                        <img src="images/figma.png" alt="figma" />
                     </div>
                 </div>
-                <div class='right'>
-                    <img src="images/E-DN.png" alt="" />
-                </div>
-            </div>
-    
-            <div class='video'>
-                <video src="images/edn.mp4" autoPlay loop muted></video>
-            </div>
-
-            <h1 class='red-title'>Contactez-moi !</h1>
-            <div class="contact-flex">
-                <form id="form">
-                    <input type="text" placeholder='Prénom' name='your_name' id="your_name" required/>
-                    <input type="email" placeholder='E-mail' name='your_email' id="your_email" required/>
-                    <textarea placeholder="Objets" name='message' id="message" required></textarea>
-                    <div>
-                        <input type="submit" value="Envoyer" id="submit" onclick="SendMail();"/>          
+        
+                <div class='description'>
+                    <div class='left'>
+                        <p>EDN est un site web qui a été conçu lors d'un projet scolaire où nous devons promouvoir un évènement fictif. Dans notre cas, on voulait promouvoir un évènement caritatif E-Sport. On avait comme contrainte d'utiliser Wordpress qui offrait peu de fonctionnalité comparé au code. Il fallait tout d'abord créer la maquette sur Figma pour ensuite le traduire en code Wordpress. J'ai été dans une équipe de 5, mon rôle dans ce projet scolaire était de coder l'intégralité du site en Wordpress. J'ai fais cette tâche avec Louis Bocquet, Tanguy Caruel était chargé de designer le site et Valentin Warlop et Lucas Chedhomme était chargé du contenu Multimédia </p>
+                        <div>
+                        <a class="button" href="" target="_blank">Voir le projet</a>
+                        </div>
                     </div>
-                </form>
+                    <div class='right'>
+                        <img src="images/E-DN.png" alt="edn" />
+                    </div>
+                </div>
+        
+                <div class='video'>
+                    <video src="images/edn.mp4" autoPlay loop muted></video>
+                </div>
+
+                <h1 class='red-title gsap4'>Contactez-moi !</h1>
+                <div class="contact-flex">
+                    <form id="form">
+                        <input type="text" placeholder='Prénom' name='your_name' id="your_name" required/>
+                        <input type="email" placeholder='E-mail' name='your_email' id="your_email" required/>
+                        <textarea placeholder="Objets" name='message' id="message" required></textarea>
+                        <div>
+                            <input type="submit" value="Envoyer" id="submit" onclick="SendMail();"/>          
+                        </div>
+                    </form>
+                    <div>
+                        <img class="call" src="images/call.png" alt="on_s'appelle ?">
+                    </div>
+                </div>
+
+                <div class="bar"></div>
+                <footer>
+                    <div>
+                        <a href="images/cv.pdf" target='_blank'><img src="images/cv.png" alt="cv" /></a>
+                        <p>CV</p>
+                    </div>
+                    <div>
+                        <a href="mailto:gautier.fournet@gmail.com" target='_blank'><img src="images/mail.png" alt="mail" /></a>
+                        <p>gautier.fournet@gmail.com</p>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/gautier-fournet-9a9643271/" target='_blank'><img src="images/linkedin.png" alt="linkedin" /></a>
+                        <p>Linkedin</p>
+                    </div>
+                    <div>
+                        <a href="https://github.com/gautierfrnt" target='_blank'><img src="images/github.png" alt="github" /></a>
+                        <p>Github</p>
+                    </div>
+                </footer>
+                            
             </div>
+        </main>
 
-            <div class="contact_bottom">
-                <div>
-                    <a href="images/cv.pdf" target='_blank'><img src="images/cv.png" alt="cv" /></a>
-                    <p>CV</p>
-                </div>
-                <div>
-                    <a href="mailto:gautier.fournet@gmail.com" target='_blank'><img src="images/mail.png" alt="mail" /></a>
-                    <p>gautier.fournet@gmail.com</p>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/gautier-fournet-9a9643271/" target='_blank'><img src="images/linkedin.png" alt="linkedin" /></a>
-                    <p>Linkedin</p>
-                </div>
-                <div>
-                    <a href="https://github.com/gautierfrnt" target='_blank'><img src="images/github.png" alt="github" /></a>
-                    <p>Github</p>
-                </div>
-            </div>
-                        
-        </div>
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
 
-        <!-- Email JS -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
+    <script type="text/javascript">
+        emailjs.init("TL560xq4WlMFu91I-");
+    </script>
 
-        <script type="text/javascript">
-            emailjs.init("TL560xq4WlMFu91I-");
-        </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-        <script src="app.js"></script>
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+
+    <script src="app.js"></script>
 </body>
 </html>
